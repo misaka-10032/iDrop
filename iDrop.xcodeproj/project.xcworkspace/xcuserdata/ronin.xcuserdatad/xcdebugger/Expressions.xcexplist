@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ViewController initScene]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mainView.bounds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController isCharacterDied]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController onRestartClick]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__31-[ViewController dispatchQueue]_block_invoke_2:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController updateCharacter]:ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController drawRect:]:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageToDraw">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__31-[ViewController dispatchQueue]_block_invoke:ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mainView.bounds.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainView drawRect:]:MainView.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
