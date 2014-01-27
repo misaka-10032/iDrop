@@ -19,12 +19,16 @@
 // (306, 349) in iPhone
 // the higher the num, the lower the sensitivity
 // 3 in 349
-#define ascVelocityInv (180)
+#define ascVelocityInv (250)
 // 6 in 306
-#define movVelocityInv (90)
+#define movVelocityInv (100)
+#define stgVelocityInv (150)
 // 3 in 349
-#define gravityInv (180)
-
+#define gravityInv (300)
+#define difficultyChangePoint (12)
+#define difficultyChangeRate (1.05)
+//#define difficultyChangePoint (1)
+//#define difficultyChangeRate (2)
 
 enum Status {START, RESUME, GAMING, PAUSE, RESTART, GAMEOVER};
 

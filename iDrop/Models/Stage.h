@@ -10,5 +10,5 @@
 #import "ViewObject.h"
 
 @interface Stage : ViewObject
-
+-(id) initWithContainerWidth:(float)width Height:(float)height selfImage:(UIImage*)image speedup:(float)speedup;
 @end

@@ -14,11 +14,10 @@
 @property float y;
 @property float vx;
 @property float vy;
-@property bool isExist;
+//@property bool isExist;
 @property (strong, nonatomic) UIImage *image;
 @property float containerWidth;
 @property float containerHeight;
 
--(id) initWithContainerWidth:(float)width Height:(float)height
-                   selfImage:(UIImage*) image;
+-(id) initWithContainerWidth:(float)width Height:(float)height selfImage:(UIImage*)image speedup:(float)speedup;
 @end

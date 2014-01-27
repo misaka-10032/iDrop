@@ -14,6 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [WXApi registerApp:@"wx7a53b0f7fcbead9c"];
+    [self initializeStoryBoardBasedOnScreenSize];
     return YES;
 }
 							
@@ -49,5 +51,80 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication*)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+-(void) onReq:(BaseReq*)req {
+    
+}
+
+-(void) onResp:(BaseResp*)resp {
+    
+}
+
+-(void)initializeStoryBoardBasedOnScreenSize {
+    
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+    {    // The iOS device = iPhone or iPod Touch
+        
+        
+        CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
+        
+        if (iOSDeviceScreenSize.height == 480)
+        {   // iPhone 3GS, 4, and 4S and iPod Touch 3rd and 4th generation: 3.5 inch screen (diagonally measured)
+            
+            // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone35
+            UIStoryboard *iPhone35Storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone4" bundle:nil];
+            
+            // Instantiate the initial view controller object from the storyboard
+            UIViewController *initialViewController = [iPhone35Storyboard instantiateInitialViewController];
+            
+            // Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            
+            // Set the initial view controller to be the root view controller of the window object
+            self.window.rootViewController  = initialViewController;
+            
+            // Set the window object to be the key window and show it
+            [self.window makeKeyAndVisible];
+        }
+        
+        if (iOSDeviceScreenSize.height == 568)
+        {   // iPhone 5 and iPod Touch 5th generation: 4 inch screen (diagonally measured)
+            
+            // Instantiate a new storyboard object using the storyboard file named Storyboard_iPhone4
+            UIStoryboard *iPhone4Storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone5" bundle:nil];
+            
+            // Instantiate the initial view controller object from the storyboard
+            UIViewController *initialViewController = [iPhone4Storyboard instantiateInitialViewController];
+            
+            // Instantiate a UIWindow object and initialize it with the screen size of the iOS device
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            
+            // Set the initial view controller to be the root view controller of the window object
+            self.window.rootViewController  = initialViewController;
+            
+            // Set the window object to be the key window and show it
+            [self.window makeKeyAndVisible];
+        }
+        
+    }
+//    else if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+//        
+//    {   // The iOS device = iPad
+//        
+//        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+//        UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+//        splitViewController.delegate = (id)navigationController.topViewController;
+//        
+//    }
+}
+
 
 @end

@@ -10,9 +10,8 @@
 
 @implementation Stage
 
--(id) initWithContainerWidth:(float)width Height:(float)height
-                   selfImage:(UIImage*) image {
-    self = [super initWithContainerWidth:width Height:height selfImage:image];
+-(id) initWithContainerWidth:(float)width Height:(float)height selfImage:(UIImage*)image speedup:(float)speedup {
+    self = [super initWithContainerWidth:width Height:height selfImage:image speedup:speedup];
     return self;
 }
 

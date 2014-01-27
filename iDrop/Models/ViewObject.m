@@ -11,8 +11,7 @@
 
 @implementation ViewObject
 
--(id) initWithContainerWidth:(float)width Height:(float)height
-                   selfImage:(UIImage*) image{
+-(id) initWithContainerWidth:(float)width Height:(float)height selfImage:(UIImage*)image speedup:(float)speedup {
     self = [super init];
     if (self) {
         self.containerWidth = width;
@@ -21,8 +20,7 @@
         self.x = (self.containerWidth-image.size.width) * (arc4random()%nWidthUnits) / (nWidthUnits-1);
         self.y = height;
         self.vx = 0;
-        self.vy = - self.containerHeight/ascVelocityInv;
-        self.isExist = true;
+        self.vy = - self.containerHeight/ascVelocityInv*speedup;
     }
     return self;
 }

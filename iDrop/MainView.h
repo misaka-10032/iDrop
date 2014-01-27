@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Character.h"
 
 @interface MainView : UIView {
     NSMutableArray *viewObjects;
+    Character *character;
 }
 
 - (void) setViewObjects:(NSMutableArray*)viewObjects;
-//- (void)drawImage:(UIImage*)image atPoint:(CGPoint)point;
+- (void) setCharacter:(Character*)character;
+
+@property float bound1;
+@property float bound2;
+@property float pos;
+
 @end

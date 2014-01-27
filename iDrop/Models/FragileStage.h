@@ -1,15 +1,15 @@
 //
-//  Character.h
+//  FragileStage.h
 //  iDrop
 //
-//  Created by ronin on 13-12-3.
+//  Created by ronin on 13-12-14.
 //  Copyright (c) 2013年 ronin. All rights reserved.
 //
 
-#import "ViewObject.h"
+#import "Stage.h"
 
-@interface Character : ViewObject
-@property float vMov;
-@property float gravity;
+@interface FragileStage : Stage
+
+@property bool isExist;
 -(id) initWithContainerWidth:(float)width Height:(float)height selfImage:(UIImage*)image speedup:(float)speedup;
 @end

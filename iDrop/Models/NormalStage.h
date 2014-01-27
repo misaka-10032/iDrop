@@ -9,5 +9,5 @@
 #import "Stage.h"
 
 @interface NormalStage : Stage
-
+-(id) initWithContainerWidth:(float)width Height:(float)height selfImage:(UIImage*)image speedup:(float)speedup;
 @end
